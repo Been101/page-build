@@ -4,6 +4,8 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import Vuex from "vuex";
 import store from "../store/store.js";
+import "@/components/index";
+import "@/compConfig/index";
 Vue.config.productionTip = false;
 
 Vue.use(Vuex);

@@ -4,6 +4,9 @@
       <el-form-item label="标签">
         <el-input v-model="configJson.label"></el-input>
       </el-form-item>
+      <el-form-item label="v-model 绑定字段">
+        <el-input v-model="configJson['v-model']"></el-input>
+      </el-form-item>
     </el-form>
   </div>
 </template>

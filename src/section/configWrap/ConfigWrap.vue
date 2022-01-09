@@ -6,20 +6,21 @@
 </template>
 
 <script>
-import CpSelectorConfig from "@/compConfig/CpSelectorConfig";
 import { mapGetters } from "vuex";
 export default {
   name: "ConfigWrap",
-  components: {
-    CpSelectorConfig,
-  },
   data() {
-    return {
-      configName: "CpSelectorConfig",
-    };
+    return {};
   },
   computed: {
     ...mapGetters(["page", "activeComp"]),
+    configName() {
+      if (this.activeComp.tag) {
+        return `${this.activeComp.tag}Config`;
+      } else {
+        return "";
+      }
+    },
     config_json() {
       return this.activeComp.config_json;
     },
